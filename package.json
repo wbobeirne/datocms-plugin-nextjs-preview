@@ -27,7 +27,7 @@
   "license": "ISC",
   "datoCmsPlugin": {
     "title": "Next.js Preview Links",
-    "previewImage": "docs/preview.gif",
+    "previewImage": "docs/preview.png",
     "coverImage": "docs/cover.png",
     "entryPoint": "dist/index.html",
     "pluginType": "sidebar",
