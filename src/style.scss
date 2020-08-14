@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 16px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  text-align: center;
+
+  &.primary {
+    color: #FFF;
+  }
+
+  &.secondary {
+    border: 2px solid;
+  }
+}
+
+.new-msg {
+  font-size: 16px;
+  color: #848484;
+  text-align: center;
+}
