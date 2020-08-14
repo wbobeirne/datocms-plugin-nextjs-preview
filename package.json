@@ -64,7 +64,6 @@
           "id": "developmentMode",
           "label": "Development mode",
           "type": "boolean",
-          "required": true,
           "default": false,
           "hint": "Shows debug messages in console"
         }
