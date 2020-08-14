@@ -59,7 +59,7 @@ export default class Main extends Component {
   getPathReplacementFields() {
     // eslint-disable-next-line react/destructuring-assignment
     const matches = this.props.plugin.parameters.instance.entityPath.match(replacementFieldRegex);
-    return matches.map(m => m.replace('$', ''));
+    return matches && matches.map(m => m.replace('$', ''));
   }
 
   getEntityPath() {
