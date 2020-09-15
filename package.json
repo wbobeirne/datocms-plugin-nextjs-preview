@@ -1,8 +1,8 @@
 {
-  "name": "datocms-plugin-nextjs-preview",
+  "name": "datocms-plugin-nextjs-multilang-preview",
   "homepage": "https://github.com/wbobeirne/datocms-plugin-nextjs-preview",
-  "version": "0.1.2",
-  "description": "Plugin that provides links to preview content in Next.js",
+  "version": "0.1.0",
+  "description": "Plugin that provides links to preview content in Next.js for use in multilingual datoCMS projects.",
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"yarn dev\" \"yarn localtunnel\"",
@@ -14,7 +14,7 @@
   },
   "keywords": [
     "datocms",
-    "sidebar",
+    "field-addon",
     "datocms-plugin",
     "json-field",
     "next.js"
@@ -23,14 +23,14 @@
     "dist",
     "docs"
   ],
-  "author": "Will O'Beirne <wbobeirne@gmail.com>",
+  "author": "Thomas Iacopino <thomas.iacopino@eurac.edu>",
   "license": "ISC",
   "datoCmsPlugin": {
-    "title": "Next.js Preview Links",
+    "title": "Next.js Multilang Preview Links",
     "previewImage": "docs/preview.png",
     "coverImage": "docs/cover.png",
     "entryPoint": "dist/index.html",
-    "pluginType": "sidebar",
+    "pluginType": "field_addon",
     "fieldTypes": [
       "json"
     ],
@@ -114,13 +114,9 @@
     "yo": "^2.0.5"
   },
   "dependencies": {
-    "eslint-utils": ">=1.4.1",
-    "https-proxy-agent": ">=2.2.3",
-    "lodash": ">=4.17.12",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "set-value": ">=2.0.1 <3.0.0 || >=3.0.1"
+    "react-dom": "^16.5.2"
   },
   "resolutions": {
     "eslint-utils": ">=1.4.1",

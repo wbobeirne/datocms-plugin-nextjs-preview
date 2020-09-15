@@ -7,21 +7,28 @@ a {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
-  height: 40px;
-  line-height: 40px;
+  height: 30px;
+  line-height: 30px;
   padding: 0 16px;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
   border-radius: 8px;
   text-align: center;
 
   &.primary {
     color: #FFF;
+    border: 2px solid transparent;
+    margin-right: 10px;
   }
 
   &.secondary {
     border: 2px solid;
   }
+}
+.previewcontainer {
+  display: flex;
+  margin-top: 10px;
 }
 
 .new-msg {

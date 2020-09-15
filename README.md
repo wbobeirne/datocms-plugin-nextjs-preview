@@ -1,4 +1,10 @@
-# Next.js Preview Links DatoCMS Plugin
+# Next.js Preview Links for multilingual DatoCMS Projects
+
+This is a forked version of [Next.js Preview Links](https://github.com/wbobeirne/datocms-plugin-nextjs-preview), witch is used for multilingual [datoCMS](https://www.datocms.com/) projects.
+
+Here the original readme:
+
+## Configuration
 
 Plugin that adds quick links to preview & view your DatoCMS on a Next.js site.
 Assumes you have a preview implementation based off of the [official Next.js Preview Mode guide](https://nextjs.org/docs/advanced-features/preview-mode).
@@ -16,9 +22,9 @@ given entity on your site. You can sub in any field on the entity using the $fie
 
 ![JSON field screenshot](./docs/field.png)
 
-## Preview Links 
+## Preview Links
 
-Once you've configured the plugin and added the field to a model, you will be able to see it as a sidebar widget. 
+Once you've configured the plugin and added the field to a model, you will be able to see it as a sidebar widget.
 
 ![Plugin screenshot](./docs/preview.png)
 

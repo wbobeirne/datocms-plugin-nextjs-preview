@@ -22,7 +22,7 @@ export default class Main extends Component {
 
     this.state = {
       fields: {},
-      locale: '',
+      locale: {},
     };
   }
 
@@ -43,13 +43,13 @@ export default class Main extends Component {
 
       // Subscribe to changes for all fields that are used in the path
       matches.forEach((m) => {
-        fields[m] = plugin.getFieldValue(m);
-        this.unsubscribers.push(plugin.addFieldChangeListener(m, (value) => {
+        fields[m] = plugin.getFieldValue(m, locale);
+        this.unsubscribers.push(plugin.addFieldChangeListener(m, () => {
           this.setState(s => ({
             ...s,
             fields: {
               ...s,
-              [m]: value,
+              [m]: plugin.getFieldValue(m, locale),
             },
           }));
         }));
@@ -122,8 +122,10 @@ export default class Main extends Component {
 
     return (
       <>
-        <a className="primary" target="_blank" rel="noopener noreferrer" href={previewHref} style={{ backgroundColor: accentColor }}>Preview</a>
-        <a className="secondary" target="_blank" rel="noopener noreferrer" href={liveHref} style={{ borderColor: accentColor, color: accentColor }}>View published</a>
+        <div className="previewcontainer">
+          <a className="primary" target="_blank" rel="noopener noreferrer" href={previewHref} style={{ backgroundColor: accentColor }}>Preview</a>
+          <a className="secondary" target="_blank" rel="noopener noreferrer" href={liveHref} style={{ borderColor: accentColor, color: accentColor }}>View published</a>
+        </div>
       </>
     );
   }
