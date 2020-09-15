@@ -114,9 +114,13 @@
     "yo": "^2.0.5"
   },
   "dependencies": {
+    "eslint-utils": ">=1.4.1",
+    "https-proxy-agent": ">=2.2.3",
+    "lodash": ">=4.17.12",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "set-value": ">=2.0.1 <3.0.0 || >=3.0.1"
   },
   "resolutions": {
     "eslint-utils": ">=1.4.1",
