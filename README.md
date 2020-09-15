@@ -4,7 +4,7 @@ This is a forked version of [Next.js Preview Links](https://github.com/wbobeirne
 
 Here the original readme:
 
-## Configuration
+## About
 
 Plugin that adds quick links to preview & view your DatoCMS on a Next.js site.
 Assumes you have a preview implementation based off of the [official Next.js Preview Mode guide](https://nextjs.org/docs/advanced-features/preview-mode).
@@ -17,7 +17,9 @@ After installing the plugin, you'll need to configure the plugin settings like s
 
 Then you can add it to a field in your model, for example the "slug" field. Select the "slug" field, switch to "Presentation" and select the field add-on. You have to set an entity path, you can sub in any field on the entity using the $field_name, e.g. /blog/$slug or /product/$id.
 
- Instead of showing up in the datoCMS sidebar (like the original next.js preview links plugin) this plugin is a "field addon" and is always visible in the content editor. 
+## Preview
+
+Instead of showing up in the datoCMS sidebar (like the original next.js preview links plugin) this plugin is a "field addon" and is visible in the content editor. 
 
 ![Preview screenshot](./docs/preview.png)
 
