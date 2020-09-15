@@ -1,6 +1,6 @@
 # Next.js Preview Links for multilingual DatoCMS Projects
 
-This is a forked version of [Next.js Preview Links](https://github.com/wbobeirne/datocms-plugin-nextjs-preview), witch is used for multilingual [datoCMS](https://www.datocms.com/) projects.
+This is a forked version of [Next.js Preview Links](https://github.com/wbobeirne/datocms-plugin-nextjs-preview). This plugin is used for multilingual [datoCMS](https://www.datocms.com/) projects.
 
 Here the original readme:
 
@@ -19,7 +19,7 @@ Then you can add it to a field in your model, for example the "slug" field. Sele
 
 ## Preview
 
-Instead of showing up in the datoCMS sidebar (like the original next.js preview links plugin) this plugin is a "field addon" and is visible in the content editor. 
+Instead of showing up in the datoCMS sidebar (like the original next.js preview links plugin) this plugin is a "field addon" and is visible in the content editor.
 
 ![Preview screenshot](./docs/preview.png)
 
