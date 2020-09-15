@@ -1,7 +1,7 @@
 {
   "name": "datocms-plugin-nextjs-multilang-preview",
-  "homepage": "https://github.com/wbobeirne/datocms-plugin-nextjs-preview",
-  "version": "0.1.2",
+  "homepage": "https://github.com/tiacop/datocms-plugin-nextjs-preview",
+  "version": "0.1.0",
   "description": "Plugin that provides links to preview content in Next.js for use in multilingual datoCMS projects.",
   "main": "index.js",
   "scripts": {
