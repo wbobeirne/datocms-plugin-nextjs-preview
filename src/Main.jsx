@@ -69,9 +69,8 @@ export default class Main extends Component {
     const { fields, selectedLocale } = this.state;
     let { entityPath } = plugin.parameters.instance;
 
-
     Object.entries(fields).forEach(([field, value]) => {
-      entityPath = entityPath.replace(`$${field}`, selectedLocale ? value[selectedLocale] : value);
+      entityPath = entityPath.replace(`$${field}`, typeof value === 'object' ? value[selectedLocale] : value);
     });
 
     return entityPath;
@@ -105,7 +104,7 @@ export default class Main extends Component {
     return (
       <>
         {
-          locales.length
+          locales.length > 1
             ? (
               <select
                 style={{
