@@ -21,6 +21,8 @@ export default class Main extends Component {
 
     this.state = {
       fields: {},
+      locales: props.plugin.site.attributes.locales,
+      selectedLocale: props.plugin.site.attributes.locales[0]
     };
   }
 
@@ -53,7 +55,7 @@ export default class Main extends Component {
   componentWillUnmount() {
     if (this.unsubscribers) {
       this.unsubscribers.forEach(unsub => unsub());
-    }
+    };
   }
 
   getPathReplacementFields() {
@@ -64,11 +66,12 @@ export default class Main extends Component {
 
   getEntityPath() {
     const { plugin } = this.props;
-    const { fields } = this.state;
+    const { fields, selectedLocale } = this.state;
     let { entityPath } = plugin.parameters.instance;
 
+
     Object.entries(fields).forEach(([field, value]) => {
-      entityPath = entityPath.replace(`$${field}`, value);
+      entityPath = entityPath.replace(`$${field}`, value[selectedLocale]);
     });
 
     return entityPath;
@@ -77,6 +80,7 @@ export default class Main extends Component {
 
   render() {
     const { plugin } = this.props;
+    const { locales, selectedLocale } = this.state;
     const { accentColor } = plugin.theme;
     const {
       parameters: {
@@ -100,6 +104,24 @@ export default class Main extends Component {
 
     return (
       <>
+        <select style={{
+          width: '100%',
+          marginBottom: 10
+        }}
+        onChange={
+          event => {
+            const value = event.target.value;
+            this.setState(s => ({...s, selectedLocale: value}))
+          }
+        }>
+          {
+            locales.map((locale, i) => 
+              <option key={i} value={locale} selected={locale === selectedLocale}>
+                {locale}
+              </option>
+              )
+          }
+        </select>
         <a className="primary" target="_blank" rel="noopener noreferrer" href={previewHref} style={{ backgroundColor: accentColor }}>Preview</a>
         <a className="secondary" target="_blank" rel="noopener noreferrer" href={liveHref} style={{ borderColor: accentColor, color: accentColor }}>View published</a>
       </>
