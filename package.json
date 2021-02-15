@@ -10,7 +10,8 @@
     "dev": "NODE_ENV=development webpack-dev-server --port 5000",
     "dist": "NODE_ENV=production webpack --progress",
     "prepublishOnly": "rimraf lib dist && mkdir dist && npm run dist",
-    "addToProject": "yo datocms-plugin:add-to-project"
+    "addToProject": "yo datocms-plugin:add-to-project",
+    "eslint:fix": "eslint src/*.jsx --fix"
   },
   "keywords": [
     "datocms",
