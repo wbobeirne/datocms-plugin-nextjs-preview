@@ -84,6 +84,7 @@ export default class Main extends Component {
           instanceUrl,
           previewPath,
           previewSecret,
+          disablePreviewPath,
         },
       },
     } = plugin;
@@ -96,7 +97,7 @@ export default class Main extends Component {
     const noSlashInstanceUrl = instanceUrl.replace(/\/$/, '');
 
     const previewHref = `${noSlashInstanceUrl}${previewPath}?slug=${path}${previewSecret ? `&secret=${previewSecret}` : ''}`;
-    const liveHref = `${noSlashInstanceUrl}${path}`;
+    const liveHref = disablePreviewPath ? `${noSlashInstanceUrl}${disablePreviewPath}?slug=${path}`: `${noSlashInstanceUrl}${path}`;
 
     return (
       <>
