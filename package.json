@@ -65,7 +65,7 @@
           "label": "(Optional) Disable preview API path",
           "type": "string",
           "required": false,
-          "default": "/api/disable-preview",
+          "default": "",
           "hint": "Use this if you've created an API route to disable preview mode (using `res.clearPreviewData()`). The route should also redirect to the page slug (using `res.redirect()`). See https://nextjs.org/docs/advanced-features/preview-mode#clear-the-preview-mode-cookies for more info."
         },
         {
