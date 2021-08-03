@@ -1,7 +1,7 @@
 {
   "name": "datocms-plugin-nextjs-preview",
   "homepage": "https://github.com/wbobeirne/datocms-plugin-nextjs-preview",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Plugin that provides links to preview content in Next.js",
   "main": "index.js",
   "scripts": {
@@ -61,6 +61,14 @@
           "hint": "Secret to append to preview link query parameter, leave blank if none is needed"
         },
         {
+          "id": "disablePreviewPath",
+          "label": "(Optional) Disable preview API path",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "hint": "Use this if you've created an API route to disable preview mode (using `res.clearPreviewData()`). The route should also redirect to the page slug (using `res.redirect()`). See https://nextjs.org/docs/advanced-features/preview-mode#clear-the-preview-mode-cookies for more info."
+        },
+        {
           "id": "developmentMode",
           "label": "Development mode",
           "type": "boolean",
@@ -114,9 +122,13 @@
     "yo": "^2.0.5"
   },
   "dependencies": {
+    "eslint-utils": ">=1.4.1",
+    "https-proxy-agent": ">=2.2.3",
+    "lodash": ">=4.17.12",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "set-value": ">=2.0.1 <3.0.0 || >=3.0.1"
   },
   "resolutions": {
     "eslint-utils": ">=1.4.1",
